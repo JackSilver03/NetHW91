@@ -7,7 +7,7 @@ public class Radio {
 
     private int maxWave = 9;
 
-    private int maxLevelVolume = 10;
+    private int maxLevelVolume = 100;
 
     public Radio() {
 
