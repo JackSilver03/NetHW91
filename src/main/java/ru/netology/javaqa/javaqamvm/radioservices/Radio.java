@@ -3,6 +3,20 @@ package ru.netology.javaqa.javaqamvm.radioservices;
 public class Radio {
     private int currentWave;
 
+    private int currentVolume;
+
+    private int maxWave = 9;
+
+    private int maxLevelVolume = 10;
+
+    public Radio() {
+
+    }
+
+    public Radio(int waveCount) {
+        maxWave = waveCount - 1;
+    }
+
     public int getCurrentWave() {
         return currentWave;
     }
@@ -12,31 +26,28 @@ public class Radio {
             return;
         }
 
-        if (newCurrentWave > 9) {
+        if (newCurrentWave > maxWave) {
             return;
         }
         currentWave = newCurrentWave;
     }
 
     public void next() {
-        if (currentWave <9){
-            currentWave = currentWave +1;
-        }
-        else {
+        if (currentWave < maxWave) {
+            currentWave = currentWave + 1;
+        } else {
             currentWave = 0;
         }
     }
 
     public void prev() {
-        if (currentWave>0) {
-            currentWave = currentWave -1;
-        }
-        else {
-            currentWave = 9;
+        if (currentWave > 0) {
+            currentWave = currentWave - 1;
+        } else {
+            currentWave = maxWave;
         }
     }
 
-    private int currentVolume;
 
     public int getCurrentVolume() {
         return currentVolume;
@@ -46,20 +57,22 @@ public class Radio {
         if (newCurrentVolume < 0) {
             return;
         }
-        currentVolume=newCurrentVolume;
-        if (newCurrentVolume > 10) {
-            newCurrentVolume=10;
+        currentVolume = newCurrentVolume;
+        if (newCurrentVolume > maxLevelVolume) {
+            newCurrentVolume = maxLevelVolume;
         }
-        currentVolume=newCurrentVolume;
+        currentVolume = newCurrentVolume;
     }
+
     public void increaseVolume() {
-        if (currentVolume < 10) {
+        if (currentVolume < maxLevelVolume) {
             currentVolume = currentVolume + 1;
         }
     }
+
     public void reduceVolume() {
-        if (currentVolume>0) {
-            currentVolume = currentVolume -1;
+        if (currentVolume > 0) {
+            currentVolume = currentVolume - 1;
         }
     }
 
