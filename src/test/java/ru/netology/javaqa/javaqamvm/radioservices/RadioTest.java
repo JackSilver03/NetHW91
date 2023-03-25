@@ -2,6 +2,7 @@ package ru.netology.javaqa.javaqamvm.radioservices;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+
 public class RadioTest {
 
     @Test
@@ -72,7 +73,7 @@ public class RadioTest {
     }
 
     @Test
-    public void shouldSetNextWaveInTheMiddle () {
+    public void shouldSetNextWaveInTheMiddle() {
         Radio radio = new Radio();
         radio.setCurrentWave(5);
 
@@ -82,8 +83,9 @@ public class RadioTest {
         int actual = radio.getCurrentWave();
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
-    public void shouldSetNextWaveInTheBeginning () {
+    public void shouldSetNextWaveInTheBeginning() {
         Radio radio = new Radio();
         radio.setCurrentWave(0);
 
@@ -93,8 +95,9 @@ public class RadioTest {
         int actual = radio.getCurrentWave();
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
-    public void shouldSetNextWaveInTheEnd () {
+    public void shouldSetNextWaveInTheEnd() {
         Radio radio = new Radio();
         radio.setCurrentWave(9);
 
@@ -104,6 +107,7 @@ public class RadioTest {
         int actual = radio.getCurrentWave();
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void shouldSetPrevWaveInTheBeginning() {
         Radio radio = new Radio();
@@ -116,6 +120,7 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void shouldSetPrevWaveInTheMiddle() {
         Radio radio = new Radio();
@@ -127,6 +132,7 @@ public class RadioTest {
         int actual = radio.getCurrentWave();
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void shouldSetPrevWaveInTheEnd() {
         Radio radio = new Radio();
@@ -138,6 +144,7 @@ public class RadioTest {
         int actual = radio.getCurrentWave();
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void shouldSetValidVolumeLevelNearMin() {
         Radio radio = new Radio();
@@ -148,6 +155,7 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void shouldSetValidVolumeLevelBorderMin() {
         Radio radio = new Radio();
@@ -158,6 +166,7 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void shouldSetNotValidVolumeLevelNearMin() {
         Radio radio = new Radio();
@@ -168,6 +177,7 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void shouldSetValidVolumeLevelNearMax() {
         Radio radio = new Radio();
@@ -178,6 +188,7 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void shouldSetValidVolumeLevelBorderMax() {
         Radio radio = new Radio();
@@ -188,6 +199,7 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void shouldSetNotValidVolumeLevelNearMax() {
         Radio radio = new Radio();
@@ -198,6 +210,7 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void shouldSetIncreaseVolumeInTheBeginning() {
         Radio radio = new Radio();
@@ -209,6 +222,7 @@ public class RadioTest {
         int actual = radio.getCurrentVolume();
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void shouldSetIncreaseVolumeInTheMiddle() {
         Radio radio = new Radio();
@@ -220,6 +234,7 @@ public class RadioTest {
         int actual = radio.getCurrentVolume();
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void shouldSetIncreaseVolumeInTheEnd() {
         Radio radio = new Radio();
@@ -231,6 +246,7 @@ public class RadioTest {
         int actual = radio.getCurrentVolume();
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void shouldSetReduceVolumeInTheBeginning() {
         Radio radio = new Radio();
@@ -242,6 +258,7 @@ public class RadioTest {
         int actual = radio.getCurrentVolume();
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void shouldSetReduceVolumeInTheMiddle() {
         Radio radio = new Radio();
@@ -253,6 +270,7 @@ public class RadioTest {
         int actual = radio.getCurrentVolume();
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void shouldSetReduceVolumeInTheEnd() {
         Radio radio = new Radio();
